@@ -76,7 +76,7 @@ export default function AboutInteractive() {
     "Over the years, I've had the privilege of working with startups, agencies, and established companies, each experience teaching me something valuable about collaboration, problem-solving, and the importance of writing maintainable code. I've learned that the best solutions come from truly understanding the problem before writing a single line of code.",
     "Today, I specialize in fullstack development with React and Python, but my real expertise lies in bridging the gap between technical possibilities and user needs. I believe in continuous learning, clean architecture, and building software that teams are proud to maintain and users love to use."],
 
-    image: "https://images.unsplash.com/photo-1580894894513-541e068a3e2b",
+    image: "https://i.pinimg.com/736x/57/8e/22/578e2232b053c12c0dfc74ef5c745a22.jpg",
     imageAlt: "Professional software developer working on laptop in modern office with dual monitors showing code"
   };
 
@@ -233,7 +233,7 @@ export default function AboutInteractive() {
     issuer: "Amazon Web Services",
     date: "November 2024",
     icon: "CloudIcon",
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_197526070-1764231355157.png",
+    image: "https://i.pinimg.com/736x/8e/85/c3/8e85c3b1c3d2048157c5422ae092af6c.jpg",
     imageAlt: "AWS certification badge with cloud computing icons on blue gradient background"
   },
   {
@@ -242,7 +242,7 @@ export default function AboutInteractive() {
     issuer: "Frontend Masters",
     date: "August 2024",
     icon: "CodeBracketSquareIcon",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+    image: "https://i.pinimg.com/736x/22/de/c0/22dec0f76243bbee61ba2bb885678555.jpg",
     imageAlt: "React logo with advanced code patterns on dark background with blue accents"
   },
   {
@@ -258,7 +258,7 @@ export default function AboutInteractive() {
     issuer: "DevConf 2024",
     date: "June 2024",
     icon: "MicrophoneIcon",
-    image: "https://images.unsplash.com/photo-1590674680695-8b9efe9b764d",
+    image: "https://i.pinimg.com/736x/2a/b0/c7/2ab0c7c2e1aacd264917168785941723.jpg",
     imageAlt: "Conference speaker presenting to large audience with presentation slides visible on screen"
   },
   {
