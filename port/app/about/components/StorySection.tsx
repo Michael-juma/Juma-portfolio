@@ -27,7 +27,7 @@ export default function StorySection({ story }: StorySectionProps) {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <div className="relative rounded-xl overflow-hidden shadow-brand-lg h-96 lg:h-[500px]">
+            <div className="relative rounded-xl overflow-hidden shadow-brand-lg aspect-video lg:aspect-[4/3]">
               <AppImage
                 src={story.image}
                 alt={story.imageAlt}

@@ -34,7 +34,7 @@ export default function RecognitionSection({ recognitions }: RecognitionSectionP
               className="bg-card rounded-xl overflow-hidden shadow-brand hover:shadow-brand-lg transition-smooth border border-border"
             >
               {recognition.image && (
-                <div className="relative h-40 bg-gradient-to-br from-primary/10 to-accent/10">
+                <div className="relative aspect-video bg-gradient-to-br from-primary/10 to-accent/10">
                   <AppImage
                     src={recognition.image}
                     alt={recognition.imageAlt || `${recognition.title} certificate`}
