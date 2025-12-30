@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
+import ThemeToggle from '@/components/common/ThemeToggle';
 
 interface HeaderProps {
   className?: string;
@@ -54,15 +55,19 @@ const Header = ({ className = '' }: HeaderProps) => {
             >
               Get In Touch
             </Link>
+            <ThemeToggle />
           </div>
 
-          <button
+          <div className="flex items-center lg:hidden space-x-2">
+            <ThemeToggle />
+            <button
             onClick={toggleMobileMenu}
             className="lg:hidden p-2 text-text-secondary hover:text-primary hover:bg-surface/80 rounded-lg transition-fast border border-transparent hover:border-primary/20"
             aria-label="Toggle mobile menu"
           >
             <Icon name={isMobileMenuOpen ? 'XMarkIcon' : 'Bars3Icon'} size={24} />
           </button>
+          </div>
         </div>
 
         {isMobileMenuOpen && (
