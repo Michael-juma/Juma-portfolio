@@ -125,7 +125,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
                 <Icon name="UserGroupIcon" size={24} />
               </a>
               <a
-                href="mailto:hello@juma.dev"
+                href="mailto:obudho200@gmail.com"
                 className="text-slate-400 hover:text-primary transition-fast"
                 aria-label="Email Contact"
               >

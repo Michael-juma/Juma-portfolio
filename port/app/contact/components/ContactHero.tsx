@@ -11,13 +11,13 @@ export default function ContactHero({ className = '' }: ContactHeroProps) {
     {
       icon: 'EnvelopeIcon',
       label: 'Email',
-      href: 'mailto:hello@juma.dev',
+      href: 'mailto:obudho200@gmail.com',
       color: 'from-red-500 to-rose-600'
     },
     {
       icon: 'ChatBubbleLeftRightIcon',
       label: 'WhatsApp',
-      href: 'https://wa.me/15551234567',
+      href: 'https://wa.me/254725745754',
       color: 'from-green-500 to-emerald-600'
     },
     {

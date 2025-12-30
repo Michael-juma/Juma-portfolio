@@ -47,8 +47,8 @@ export default function SocialLinks({ className = '' }: SocialLinksProps) {
       id: '4',
       name: 'WhatsApp',
       icon: 'ChatBubbleLeftRightIcon',
-      href: 'https://wa.me/15551234567',
-      username: '+1 (555) 123-4567',
+      href: 'https://wa.me/254725745754',
+      username: '+254725745754',
       color: 'hover:text-white',
       bgGradient: 'hover:bg-gradient-to-br hover:from-green-500 hover:to-emerald-600'
     },
@@ -56,8 +56,8 @@ export default function SocialLinks({ className = '' }: SocialLinksProps) {
       id: '5',
       name: 'Email',
       icon: 'EnvelopeIcon',
-      href: 'mailto:hello@juma.dev',
-      username: 'hello@juma.dev',
+      href: 'mailto:obudho200@gmail.com',
+      username: 'obudho200@gmail.com',
       color: 'hover:text-white',
       bgGradient: 'hover:bg-gradient-to-br hover:from-red-500 hover:to-rose-600'
     }

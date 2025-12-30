@@ -36,7 +36,7 @@ const Footer = ({ className = '' }: FooterProps) => {
     { name: 'GitHub', icon: 'CodeBracketIcon', href: 'https://github.com/juma', label: 'GitHub Profile' },
     { name: 'LinkedIn', icon: 'UserGroupIcon', href: 'https://linkedin.com/in/juma', label: 'LinkedIn Profile' },
     { name: 'Twitter', icon: 'ChatBubbleLeftIcon', href: 'https://twitter.com/juma', label: 'Twitter Profile' },
-    { name: 'Email', icon: 'EnvelopeIcon', href: 'mailto:hello@juma.dev', label: 'Email Contact' }
+    { name: 'Email', icon: 'EnvelopeIcon', href: 'mailto:obudho200@gmail.com', label: 'Email Contact' }
   ];
 
   return (
@@ -105,11 +105,11 @@ const Footer = ({ className = '' }: FooterProps) => {
             <h3 className="font-headline font-semibold text-lg mb-4">Get in Touch</h3>
             <div className="space-y-3">
               <a
-                href="mailto:hello@juma.dev"
+                href="mailto:obudho200@gmail.com"
                 className="flex items-center gap-2 text-slate-400 hover:text-primary transition-fast text-sm"
               >
                 <Icon name="EnvelopeIcon" size={18} />
-                hello@juma.dev
+                obudho200@gmail.com
               </a>
               <a
                 href="https://github.com/juma"

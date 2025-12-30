@@ -132,7 +132,7 @@ export default function FAQSection({ className = '' }: FAQSectionProps) {
           Still have questions?
         </p>
         <a
-          href="mailto:hello@juma.dev"
+          href="mailto:obudho200@gmail.com"
           className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
         >
           <Icon name="EnvelopeIcon" size={20} />

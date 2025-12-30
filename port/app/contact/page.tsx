@@ -7,6 +7,7 @@ import ProjectInquiryForm from './components/ProjectInquiryForm';
 import FAQSection from './components/FAQSection';
 import LocationInfo from './components/LocationInfo';
 import SocialLinks from './components/SocialLinks';
+import ContactInfoCard from './components/ContactInfoCard';
 import Icon from '@/components/ui/AppIcon';
 
 
@@ -29,10 +30,12 @@ export default function ContactPage() {
               <div className="lg:col-span-2">
                 <ProjectInquiryForm />
               </div>
-              
+
               <div className="space-y-8">
                 <AvailabilityStatus />
                 <LocationInfo />
+                {/* Prominent contact info */}
+                <ContactInfoCard />
               </div>
             </div>
             
@@ -71,7 +74,7 @@ export default function ContactPage() {
                 Fill Out Project Form
               </a>
               <a
-                href="mailto:hello@juma.dev"
+                href="mailto:obudho200@gmail.com"
                 className="px-8 py-4 bg-card border-2 border-border text-foreground font-cta font-bold rounded-lg hover:border-primary hover:shadow-brand transition-smooth"
               >
                 Send Quick Email
