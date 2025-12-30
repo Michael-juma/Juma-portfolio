@@ -32,7 +32,7 @@ export default function AvailabilityStatus({ className = '' }: AvailabilityStatu
             </div>
             <div className="flex items-center gap-3 text-sm">
               <Icon name="GlobeAltIcon" size={16} className="text-text-secondary" />
-              <span className="text-text-secondary">Timezone: EST (UTC-5)</span>
+                <span className="text-text-secondary">Timezone: EAT (UTC+3)</span>
             </div>
             <div className="flex items-center gap-3 text-sm">
               <Icon name="VideoCameraIcon" size={16} className="text-text-secondary" />

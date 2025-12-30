@@ -14,14 +14,14 @@ export default function LocationInfo({ className = '' }: LocationInfoProps) {
           loading="lazy"
           title="Office Location"
           referrerPolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=40.7128,-74.0060&z=14&output=embed"
+          src="https://www.google.com/maps?q=South%20B%2C%20Nairobi%2C%20Kenya&z=14&output=embed"
           className="absolute inset-0"
         />
       </div>
       
       <div className="p-6">
         <h3 className="text-xl font-headline font-semibold text-foreground mb-4">
-          Based in New York City
+          Based in South B, Nairobi
         </h3>
         
         <div className="space-y-4">
@@ -29,7 +29,7 @@ export default function LocationInfo({ className = '' }: LocationInfoProps) {
             <Icon name="MapPinIcon" size={20} className="text-primary flex-shrink-0 mt-1" />
             <div>
               <p className="font-medium text-foreground">Location</p>
-              <p className="text-sm text-text-secondary">New York, NY, United States</p>
+              <p className="text-sm text-text-secondary">South B, Nairobi, Kenya</p>
             </div>
           </div>
           
@@ -55,7 +55,7 @@ export default function LocationInfo({ className = '' }: LocationInfoProps) {
         
         <div className="mt-6 pt-6 border-t border-border">
           <p className="text-sm text-text-secondary">
-            While I'm based in NYC, I work with clients globally and am experienced in remote collaboration using modern communication tools.
+            While I'm based in Kenya, I work with clients globally and am experienced in remote collaboration using modern communication tools.
           </p>
         </div>
       </div>
