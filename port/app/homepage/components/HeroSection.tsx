@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
+import AppImage from '@/components/ui/AppImage';
 
 interface HeroSectionProps {
   className?: string;
@@ -62,8 +63,15 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
   return (
     <section className={`relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden ${className}`}>
       <div className="absolute inset-0 dot-pattern opacity-10" />
-      
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+
+      {/* Decorative circular image (behind content) */}
+      <div className="hidden md:block absolute top-12 left-6 -translate-x-6 z-0 pointer-events-none">
+        <div className="w-36 h-36 lg:w-44 lg:h-44 rounded-full overflow-hidden bg-gradient-to-br from-slate-700 to-slate-900 opacity-90">
+          <AppImage src="https://i.pinimg.com/736x/21/82/27/218227279a307ac17a523a527635dc55.jpg" alt="Decorative" fill className="object-cover" />
+        </div>
+      </div>
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
