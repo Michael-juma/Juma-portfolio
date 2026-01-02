@@ -7,6 +7,10 @@ import SkillStats from './SkillStats';
 import SkillSearch from './SkillSearch';
 import SkillTimeline from './SkillTimeline';
 
+/* =======================
+   Types
+======================= */
+
 interface Skill {
   name: string;
   proficiency: number;
@@ -28,219 +32,317 @@ interface TimelineEvent {
   technologies: string[];
 }
 
+/* =======================
+   Component
+======================= */
+
 export default function SkillsInteractive() {
   const [isHydrated, setIsHydrated] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(['frontend']);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([
+    'frontend'
+  ]);
 
   useEffect(() => {
     setIsHydrated(true);
   }, []);
 
+  /* =======================
+     Skill Categories
+  ======================= */
+
   const skillCategories: SkillCategoryData[] = [
-    {
-      id: 'frontend',
-      title: 'Frontend Development',
-      skills: [
-        {
-          name: 'React.js',
-          proficiency: 95,
-          yearsOfExperience: 5,
-          projects: ['E-commerce Platform', 'SaaS Dashboard', 'Portfolio Sites'],
-          icon: '⚛️'
-        },
-        {
-          name: 'Next.js',
-          proficiency: 92,
-          yearsOfExperience: 4,
-          projects: ['Corporate Website', 'Blog Platform', 'Admin Panel'],
-          icon: '▲'
-        },
-        {
-          name: 'TypeScript',
-          proficiency: 90,
-          yearsOfExperience: 4,
-          projects: ['Enterprise Apps', 'Type-safe APIs', 'Component Libraries'],
-          icon: '📘'
-        },
-        {
-          name: 'Tailwind CSS',
-          proficiency: 93,
-          yearsOfExperience: 3,
-          projects: ['Design Systems', 'Responsive Layouts', 'UI Components'],
-          icon: '🎨'
-        },
-        {
-          name: 'JavaScript (ES6+)',
-          proficiency: 94,
-          yearsOfExperience: 5,
-          projects: ['Interactive UIs', 'Data Visualization', 'Animation Libraries'],
-          icon: '🟨'
-        }
-      ]
-    },
-    {
-      id: 'backend',
-      title: 'Backend Development',
-      skills: [
-        {
-          name: 'Python',
-          proficiency: 88,
-          yearsOfExperience: 4,
-          projects: ['REST APIs', 'Data Processing', 'Automation Scripts'],
-          icon: '🐍'
-        },
-        {
-          name: 'Node.js',
-          proficiency: 85,
-          yearsOfExperience: 4,
-          projects: ['API Servers', 'Real-time Apps', 'Microservices'],
-          icon: '🟢'
-        },
-        {
-          name: 'Django',
-          proficiency: 82,
-          yearsOfExperience: 3,
-          projects: ['Web Applications', 'Admin Dashboards', 'CMS Systems'],
-          icon: '🎸'
-        },
-        {
-          name: 'PostgreSQL',
-          proficiency: 80,
-          yearsOfExperience: 4,
-          projects: ['Database Design', 'Query Optimization', 'Data Migration'],
-          icon: '🐘'
-        },
-        {
-          name: 'MongoDB',
-          proficiency: 78,
-          yearsOfExperience: 3,
-          projects: ['NoSQL Solutions', 'Document Storage', 'Real-time Data'],
-          icon: '🍃'
-        }
-      ]
-    },
-    {
-      id: 'tools',
-      title: 'Tools & DevOps',
-      skills: [
-        {
-          name: 'Git & GitHub',
-          proficiency: 90,
-          yearsOfExperience: 5,
-          projects: ['Version Control', 'CI/CD Pipelines', 'Code Reviews'],
-          icon: '🔧'
-        },
-        {
-          name: 'Docker',
-          proficiency: 75,
-          yearsOfExperience: 2,
-          projects: ['Containerization', 'Development Environments', 'Deployment'],
-          icon: '🐳'
-        },
-        {
-          name: 'AWS',
-          proficiency: 70,
-          yearsOfExperience: 2,
-          projects: ['Cloud Hosting', 'S3 Storage', 'Lambda Functions'],
-          icon: '☁️'
-        },
-        {
-          name: 'Vercel',
-          proficiency: 85,
-          yearsOfExperience: 3,
-          projects: ['Next.js Deployment', 'Serverless Functions', 'Edge Computing'],
-          icon: '▲'
-        },
-        {
-          name: 'VS Code',
-          proficiency: 92,
-          yearsOfExperience: 5,
-          projects: ['Development Setup', 'Extensions', 'Debugging'],
-          icon: '💻'
-        }
-      ]
-    },
-    {
-      id: 'soft',
-      title: 'Soft Skills & Methodologies',
-      skills: [
-        {
-          name: 'Agile/Scrum',
-          proficiency: 85,
-          yearsOfExperience: 4,
-          projects: ['Sprint Planning', 'Daily Standups', 'Retrospectives'],
-          icon: '🔄'
-        },
-        {
-          name: 'Technical Writing',
-          proficiency: 88,
-          yearsOfExperience: 5,
-          projects: ['Documentation', 'API Guides', 'Tutorials'],
-          icon: '📝'
-        },
-        {
-          name: 'Code Review',
-          proficiency: 87,
-          yearsOfExperience: 4,
-          projects: ['Pull Requests', 'Best Practices', 'Mentoring'],
-          icon: '👀'
-        },
-        {
-          name: 'Problem Solving',
-          proficiency: 90,
-          yearsOfExperience: 5,
-          projects: ['Debugging', 'Architecture Design', 'Optimization'],
-          icon: '🧩'
-        },
-        {
-          name: 'Team Collaboration',
-          proficiency: 89,
-          yearsOfExperience: 5,
-          projects: ['Cross-functional Teams', 'Client Communication', 'Pair Programming'],
-          icon: '🤝'
-        }
-      ]
-    }
-  ];
+  /* Frontend Development */
+  {
+    id: 'frontend',
+    title: 'Frontend Development',
+    skills: [
+      {
+        name: 'React.js',
+        proficiency: 90,
+        yearsOfExperience: 1,
+        projects: [
+          'Food Court Web Application',
+          'SalesPilot Dashboard',
+          'Personal Portfolio'
+        ],
+        icon: '⚛️'
+      },
+      {
+        name: 'JavaScript (ES6+)',
+        proficiency: 90,
+        yearsOfExperience: 1,
+        projects: [
+          'Interactive Dashboards',
+          'Frontend Business Logic',
+          'Form Handling'
+        ],
+        icon: '🟨'
+      },
+      {
+        name: 'HTML5 & CSS3',
+        proficiency: 90,
+        yearsOfExperience: 1,
+        projects: [
+          'Responsive Layouts',
+          'UI Components',
+          'Landing Pages'
+        ],
+        icon: '🌐'
+      },
+      {
+        name: 'Tailwind CSS',
+        proficiency: 85,
+        yearsOfExperience: 1,
+        projects: [
+          'Design Systems',
+          'Responsive UI',
+          'Component Styling'
+        ],
+        icon: '🎨'
+      }
+    ]
+  },
+
+  /* Backend Development */
+  {
+    id: 'backend',
+    title: 'Backend Development',
+    skills: [
+      {
+        name: 'Python',
+        proficiency: 85,
+        yearsOfExperience: 1,
+        projects: ['Flask APIs', 'Business Logic', 'Data Processing'],
+        icon: '🐍'
+      },
+      {
+        name: 'Flask',
+        proficiency: 85,
+        yearsOfExperience: 1,
+        projects: [
+          'RESTful APIs',
+          'Authentication Systems',
+          'CRUD Applications'
+        ],
+        icon: '🌶️'
+      },
+      {
+        name: 'SQLAlchemy',
+        proficiency: 80,
+        yearsOfExperience: 1,
+        projects: ['Relational Models', 'ORM Relationships', 'Database Migrations'],
+        icon: '🗄️'
+      },
+      {
+        name: 'REST APIs',
+        proficiency: 85,
+        yearsOfExperience: 1,
+        projects: ['JWT Authentication', 'CRUD Endpoints', 'Role-Based Access'],
+        icon: '🔗'
+      }
+    ]
+  },
+
+  /* Databases & Data */
+  {
+    id: 'database',
+    title: 'Databases & Data',
+    skills: [
+      {
+        name: 'PostgreSQL',
+        proficiency: 80,
+        yearsOfExperience: 1,
+        projects: [
+          'Food Court Database',
+          'SalesPilot Data Models',
+          'Relational Queries'
+        ],
+        icon: '🐘'
+      },
+      {
+        name: 'SQLite',
+        proficiency: 80,
+        yearsOfExperience: 1,
+        projects: ['Development Databases', 'Testing Environments'],
+        icon: '📦'
+      },
+      {
+        name: 'MongoDB',
+        proficiency: 78,
+        yearsOfExperience: 1,
+        projects: ['NoSQL Solutions', 'Document Storage', 'Real-time Data'],
+        icon: '🍃'
+      }
+    ]
+  },
+
+  /* Tools & DevOps */
+  {
+    id: 'tools',
+    title: 'Tools & DevOps',
+    skills: [
+      {
+        name: 'Git & GitHub',
+        proficiency: 90,
+        yearsOfExperience: 1,
+        projects: ['Team Collaboration', 'Version Control', 'Pull Requests'],
+        icon: '🔧'
+      },
+      {
+        name: 'Docker',
+        proficiency: 75,
+        yearsOfExperience: 1,
+        projects: ['Containerization', 'Development Environments', 'Deployment'],
+        icon: '🐳'
+      },
+      {
+        name: 'AWS',
+        proficiency: 70,
+        yearsOfExperience: 1,
+        projects: ['Cloud Hosting', 'S3 Storage', 'Lambda Functions'],
+        icon: '☁️'
+      },
+      {
+        name: 'Vercel',
+        proficiency: 85,
+        yearsOfExperience: 1,
+        projects: ['Next.js Deployment', 'Serverless Functions', 'Edge Computing'],
+        icon: '▲'
+      },
+      {
+        name: 'Postman',
+        proficiency: 88,
+        yearsOfExperience: 1,
+        projects: ['API Testing', 'Request Automation', 'Environment Management'],
+        icon: '📬'
+      },
+      {
+        name: 'VS Code',
+        proficiency: 92,
+        yearsOfExperience: 1,
+        projects: ['Development Setup', 'Extensions', 'Debugging'],
+        icon: '💻'
+      }
+    ]
+  },
+
+  /* LLMs & AI */
+  {
+    id: 'ai',
+    title: 'LLMs & AI Engineering',
+    skills: [
+      {
+        name: 'Large Language Models (LLMs)',
+        proficiency: 85,
+        yearsOfExperience: 2,
+        projects: ['AI Chatbots', 'Code Assistants', 'Knowledge-based Systems'],
+        icon: '🤖'
+      },
+      {
+        name: 'Prompt Engineering',
+        proficiency: 88,
+        yearsOfExperience: 2,
+        projects: ['System Prompt Design', 'Few-shot Learning', 'Chain-of-Thought Prompting'],
+        icon: '🧠'
+      },
+      {
+        name: 'Retrieval Augmented Generation (RAG)',
+        proficiency: 80,
+        yearsOfExperience: 1,
+        projects: ['Document Search', 'Vector Databases', 'AI Knowledge Assistants'],
+        icon: '📚'
+      },
+      {
+        name: 'LangChain',
+        proficiency: 78,
+        yearsOfExperience: 1,
+        projects: ['Agent Workflows', 'Tool Calling', 'LLM Pipelines'],
+        icon: '🔗'
+      },
+      {
+        name: 'OpenAI API',
+        proficiency: 82,
+        yearsOfExperience: 2,
+        projects: ['Chat Completions', 'AI Automation', 'LLM-powered Apps'],
+        icon: '✨'
+      }
+    ]
+  },
+
+  /* Soft Skills & Methodologies */
+  {
+    id: 'soft',
+    title: 'Soft Skills & Methodologies',
+    skills: [
+      {
+        name: 'Communication',
+        proficiency: 92,
+        yearsOfExperience: 5,
+        projects: ['Client Discussions', 'Technical Presentations', 'Team Syncs'],
+        icon: '💬'
+      },
+      {
+        name: 'Problem Solving',
+        proficiency: 90,
+        yearsOfExperience: 5,
+        projects: ['Debugging', 'System Design', 'Performance Optimization'],
+        icon: '🧩'
+      },
+      {
+        name: 'Team Collaboration',
+        proficiency: 89,
+        yearsOfExperience: 5,
+        projects: ['Cross-functional Teams', 'Pair Programming', 'Mentorship'],
+        icon: '🤝'
+      },
+      {
+        name: 'Agile / Scrum',
+        proficiency: 85,
+        yearsOfExperience: 4,
+        projects: ['Sprint Planning', 'Standups', 'Retrospectives'],
+        icon: '🔄'
+      },
+      {
+        name: 'Leadership',
+        proficiency: 83,
+        yearsOfExperience: 3,
+        projects: ['Project Ownership', 'Junior Dev Guidance', 'Decision Making'],
+        icon: '🧭'
+      }
+    ]
+  }
+];
+
+  /* =======================
+     Learning Timeline
+  ======================= */
 
   const timelineEvents: TimelineEvent[] = [
     {
+      year: '2026',
+      title: 'Full-Stack Project Development',
+      description:
+        'Built multiple production-ready full-stack applications using React and Flask, focusing on authentication, REST APIs, and relational databases.',
+      technologies: ['React', 'Flask', 'PostgreSQL', 'SQLAlchemy', 'JWT']
+    },
+    {
       year: '2025',
-      title: 'Advanced Full-Stack Mastery',
-      description: 'Deepened expertise in Next.js 14, TypeScript, and modern React patterns. Built production-grade applications with focus on performance and user experience.',
-      technologies: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'React Server Components']
-    },
-    {
-      year: '2024',
-      title: 'Cloud & DevOps Integration',
-      description: 'Expanded into cloud infrastructure and DevOps practices. Implemented CI/CD pipelines and containerized applications for scalable deployment.',
-      technologies: ['Docker', 'AWS', 'Vercel', 'GitHub Actions']
-    },
-    {
-      year: '2023',
-      title: 'Backend Development Focus',
-      description: 'Strengthened backend skills with Python and Node.js. Built RESTful APIs and implemented database solutions for complex applications.',
-      technologies: ['Python', 'Django', 'Node.js', 'PostgreSQL', 'MongoDB']
-    },
-    {
-      year: '2022',
-      title: 'Modern Frontend Frameworks',
-      description: 'Transitioned to React ecosystem and modern JavaScript frameworks. Mastered component-based architecture and state management.',
-      technologies: ['React', 'Next.js', 'Redux', 'JavaScript ES6+']
-    },
-    {
-      year: '2021',
-      title: 'Web Development Foundation',
-      description: 'Started professional journey in web development. Built solid foundation in HTML, CSS, JavaScript, and responsive design principles.',
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design']
+      title: 'Software Engineering Training',
+      description:
+        'Completed intensive full-stack software engineering training at Moringa School with hands-on projects and team collaboration.',
+      technologies: ['JavaScript', 'Python', 'React', 'Flask', 'Git']
     }
   ];
 
+  /* =======================
+     Helpers
+  ======================= */
+
   const toggleCategory = (categoryId: string) => {
     if (!isHydrated) return;
-    
+
     setExpandedCategories(prev =>
       prev.includes(categoryId)
         ? prev.filter(id => id !== categoryId)
@@ -248,45 +350,52 @@ export default function SkillsInteractive() {
     );
   };
 
-  const filteredCategories = skillCategories.filter(category => {
-    if (activeFilter === 'all') return true;
-    return category.id === activeFilter;
-  }).map(category => ({
-    ...category,
-    skills: category.skills.filter(skill =>
-      searchQuery === '' ||
-      skill.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      skill.projects.some(project => project.toLowerCase().includes(searchQuery.toLowerCase()))
+  const filteredCategories = skillCategories
+    .filter(category =>
+      activeFilter === 'all' ? true : category.id === activeFilter
     )
-  })).filter(category => category.skills.length > 0);
+    .map(category => ({
+      ...category,
+      skills: category.skills.filter(
+        skill =>
+          searchQuery === '' ||
+          skill.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          skill.projects.some(project =>
+            project.toLowerCase().includes(searchQuery.toLowerCase())
+          )
+      )
+    }))
+    .filter(category => category.skills.length > 0);
+
+  /* =======================
+     Loading State
+  ======================= */
 
   if (!isHydrated) {
     return (
-      <div className="min-h-screen bg-background">
-        <div className="w-full px-4 py-16 lg:px-8">
-          <div className="max-w-6xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <div className="h-12 bg-surface rounded-lg w-64 mx-auto animate-pulse" />
-              <div className="h-6 bg-surface rounded-lg w-96 mx-auto animate-pulse" />
-            </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              {[1, 2, 3, 4].map(i => (
-                <div key={i} className="h-32 bg-surface rounded-lg animate-pulse" />
-              ))}
-            </div>
-          </div>
-        </div>
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <p className="text-muted-foreground">Loading skills...</p>
       </div>
     );
   }
+
+  /* =======================
+     Render
+  ======================= */
 
   return (
     <div className="space-y-12">
       <SkillStats />
 
       <div className="space-y-6">
-        <SkillSearch searchQuery={searchQuery} onSearchChange={setSearchQuery} />
-        <SkillFilter activeFilter={activeFilter} onFilterChange={setActiveFilter} />
+        <SkillSearch
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+        />
+        <SkillFilter
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+        />
       </div>
 
       <div className="space-y-4">
@@ -302,7 +411,9 @@ export default function SkillsInteractive() {
           ))
         ) : (
           <div className="text-center py-12">
-            <p className="text-text-secondary text-lg">No skills found matching your search.</p>
+            <p className="text-text-secondary text-lg">
+              No skills found matching your search.
+            </p>
           </div>
         )}
       </div>
