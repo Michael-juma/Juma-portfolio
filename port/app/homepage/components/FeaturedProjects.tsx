@@ -33,88 +33,152 @@ const FeaturedProjects = ({ className = '' }: FeaturedProjectsProps) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const projects: Project[] = [
-  {
-    id: 1,
-    title: 'E-Commerce Platform Redesign',
-    description: 'Complete overhaul of legacy e-commerce system resulting in 45% increase in conversion rates and 60% faster page loads. Built with Next.js 14, TypeScript, and Stripe integration.',
-    fullDescription: 'This comprehensive e-commerce platform redesign transformed a legacy system into a modern, high-performance online store. The project involved complete architectural refactoring, UI/UX improvements, and backend optimization. The new platform processes 100K+ transactions monthly with 99.9% uptime.',
-    image: "https://images.unsplash.com/photo-1635405074683-96d6921a2a68",
-    alt: 'Modern e-commerce website interface showing product grid with shopping cart on laptop screen',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe', 'PostgreSQL', 'Redis'],
-    category: 'Web Application',
-    challenges: [
-      'Migrating 500K+ product records without downtime',
-      'Optimizing image loading for 10K+ SKUs',
-      'Implementing real-time inventory sync across 20+ warehouses',
-      'Achieving PCI compliance for payment processing'
-    ],
-    results: [
-      '45% increase in conversion rates',
-      '60% improvement in page load times',
-      '99.9% platform uptime',
-      '$2M additional annual revenue'
-    ],
-    links: {
-      github: 'https://github.com/michael-juma/ecommerce-platform',
-      live: 'https://ecommerce-platform.demo.com',
-      demo: 'https://youtu.be/ecommerce-platform-demo'
-    }
-  },
-  {
-    id: 2,
-    title: 'Real-Time Analytics Dashboard',
-    description: 'Enterprise-grade analytics platform processing 10M+ events daily. Features real-time data visualization, custom reporting, and predictive analytics powered by Python and React.',
-    fullDescription: 'A sophisticated analytics dashboard built to handle massive scale with real-time data processing. The platform ingests over 10 million events daily from multiple sources, provides real-time visualizations, custom report generation, and predictive analytics. Serves 500+ enterprise clients with 99.95% availability.',
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3",
-    alt: 'Analytics dashboard displaying colorful charts and graphs with real-time data metrics on desktop monitor',
-    technologies: ['React', 'Python', 'PostgreSQL', 'Redis', 'Apache Kafka', 'D3.js', 'AWS'],
-    category: 'Data Platform',
-    challenges: [
-      'Processing 10M+ events daily with sub-second latency',
-      'Managing multi-tenant data isolation and security',
-      'Scaling to 500+ concurrent users',
-      'Building real-time predictive models'
-    ],
-    results: [
-      '99.95% platform availability',
-      '500+ enterprise clients',
-      '10M+ daily event processing',
-      'Sub-second query response times'
-    ],
-    links: {
-      github: 'https://github.com/michael-juma/analytics-dashboard',
-      live: 'https://analytics-dashboard.demo.com',
-      demo: 'https://youtu.be/analytics-dashboard-demo'
-    }
-  },
-  {
-    id: 3,
-    title: 'Mobile-First SaaS Application',
-    description: 'Progressive web app serving 50K+ users with offline-first architecture. Achieved 98% uptime and 4.8-star rating through meticulous attention to performance and UX.',
-    fullDescription: 'A cutting-edge Progressive Web App (PWA) designed with mobile-first principles from the ground up. The application features offline-first architecture, allowing users to work seamlessly even without internet connectivity. With over 50,000 active users and a 4.8-star rating, it demonstrates the power of modern web technologies.',
-    image: "https://images.unsplash.com/photo-1647880087466-a1318b812de5",
-    alt: 'Mobile phone displaying modern SaaS application interface with clean design and intuitive navigation',
-    technologies: ['Next.js', 'PWA', 'Firebase', 'Tailwind CSS', 'Web Workers', 'IndexedDB'],
-    category: 'Mobile App',
-    challenges: [
-      'Building robust offline-first architecture',
-      'Optimizing for mobile performance and battery life',
-      'Syncing data across multiple devices',
-      'Ensuring 99%+ uptime across 50K+ users'
-    ],
-    results: [
-      '50K+ active users',
-      '4.8-star rating (2,000+ reviews)',
-      '98% uptime SLA',
-      '2.5 second average load time'
-    ],
-    links: {
-      github: 'https://github.com/michael-juma/mobile-saas-app',
-      live: 'https://mobile-saas.demo.com',
-      demo: 'https://youtu.be/mobile-saas-demo'
-    }
-  }];
+    {
+      id: 1,
+      title: 'Mobile E-Commerce Application',
+      description:
+        'A modern mobile e-commerce application built with React Native, delivering a fast, intuitive shopping experience. The app improved user engagement by 40% and reduced checkout time significantly.',
 
+      fullDescription:
+        'This project is a fully featured mobile e-commerce application designed to solve common challenges faced by online shoppers, such as slow performance, complex navigation, and unreliable checkout flows. Built using React Native, the app provides a smooth cross-platform experience on both Android and iOS devices. The system includes product browsing, cart management, secure payments, and order tracking, all optimized for mobile users. The application emphasizes performance, usability, and scalability while ensuring a clean and modern UI.',
+
+      image: 'https://i.pinimg.com/1200x/8c/5d/e3/8c5de3bd89db3accc935cf30c977ed38.jpg',
+      alt: 'Mobile e-commerce application interface displaying product listings and shopping cart',
+
+      technologies: [
+        'React Native',
+        'JavaScript',
+        'Expo',
+        'Firebase',
+        'REST APIs',
+        'Bootstrap (UI Design)',
+      ],
+
+      category: 'Mobile Application',
+
+      challenges: [
+        'Designing a responsive UI that works seamlessly across different screen sizes',
+        'Managing application state efficiently for cart and user sessions',
+        'Integrating secure mobile payment workflows',
+        'Optimizing app performance for low-end devices',
+      ],
+
+      results: [
+        '40% increase in user engagement',
+        'Faster checkout process and improved user retention',
+        'Stable performance across Android and iOS platforms',
+        'Scalable architecture ready for future feature expansion',
+      ],
+
+      links: {
+        github: 'https://github.com/Michael-juma/E-commers-system',
+        live: 'https://e-commers-system-uhro.vercel.app/',
+        demo: 'https://e-commers-system-uhro.vercel.app/',
+      },
+    },
+
+    {
+      id: 2,
+      title: 'Enterprise IT & Security Solutions Dashboard',
+      description:
+        'Comprehensive IT management and security platform for businesses. Features real-time system monitoring, threat detection, and infrastructure analytics powered by React and TypeScript.',
+      fullDescription:
+        'A robust IT solutions dashboard designed for enterprise clients, combining system monitoring, cybersecurity, and operational analytics. The platform provides real-time visibility into IT infrastructure, detects security threats, and generates actionable insights to improve performance and resilience. It integrates multiple IT services into a single interface, enabling clients to manage their networks, applications, and security posture efficiently. Deployed for multiple businesses, it ensures high availability, secure data handling, and type-safe code with React and TypeScript.',
+      image: 'https://i.pinimg.com/736x/c3/8b/5b/c38b5bc342544fc1ff59d92a958ee91f.jpg',
+      alt: 'IT solutions dashboard showing network metrics, security alerts, and real-time system analytics on desktop monitor',
+      technologies: [
+        'React',
+        'TypeScript',
+        'HTML',
+        'Bootstrap',
+        'Node.js',
+        'Cybersecurity Tools',
+        'AWS',
+      ],
+      category: 'IT Solutions & Security',
+      challenges: [
+        'Ensuring secure multi-client access and data privacy',
+        'Real-time monitoring of IT systems across multiple networks',
+        'Integrating diverse IT services into a unified platform',
+        'Scaling infrastructure to handle enterprise-level workloads',
+        'Maintaining type safety and reliable code with React and TypeScript',
+      ],
+      results: [
+        'Centralized IT management for multiple enterprises',
+        'Enhanced network security and threat detection',
+        'Real-time operational insights for IT administrators',
+        'High availability and secure data handling',
+        'Reliable and maintainable codebase with TypeScript',
+      ],
+      links: {
+        github: 'https://github.com/Michael-juma/juma-tech.git',
+        live: 'https://juma-tech-urkm.vercel.app/',
+        demo: 'https://juma-tech-urkm.vercel.app/',
+      },
+    },
+
+    {
+      id: 3,
+      title: 'Real Estate Listing & Property Management Platform',
+      description:
+        'A responsive real estate web application that helps users discover, explore, and inquire about properties for sale or rent. Built using HTML, JavaScript, and Bootstrap with a strong focus on usability and clean design.',
+
+      fullDescription:
+        'This real estate project was developed to simplify the process of finding and managing property listings online. The platform allows users to browse available houses, apartments, and commercial properties, view detailed property information, and make inquiries directly from the website. Built with HTML for structure, Bootstrap for responsive and modern UI design, and JavaScript for interactivity, the project delivers a smooth user experience across all devices. The system addresses common problems such as poor mobile responsiveness, cluttered property information, and difficult navigation by offering a clean layout, clear call-to-action buttons, and intuitive filtering features.',
+
+      image: 'https://i.pinimg.com/1200x/9b/a3/c3/9ba3c366a32568e271318564b92adbd1.jpg',
+      alt: 'Real estate website interface displaying property listings with images, prices, and location details',
+
+      technologies: ['HTML5', 'JavaScript', 'Bootstrap 5'],
+
+      category: 'Web Application',
+
+      challenges: [
+        'Designing a fully responsive layout for property listings across different screen sizes',
+        'Structuring property data dynamically using JavaScript',
+        'Creating an intuitive user interface that highlights key property details',
+        'Ensuring fast load times while displaying multiple property images',
+      ],
+
+      results: [
+        'Clean and responsive real estate listing interface',
+        'Improved user navigation and property discovery experience',
+        'Mobile-friendly design optimized for phones, tablets, and desktops',
+        'Scalable front-end structure ready for backend integration',
+      ],
+
+      links: {
+        github: 'https://github.com/Michael-juma/Real-estate.git',
+        live: 'https://real-estate-gamma-green.vercel.app/',
+        demo: 'https://real-estate-gamma-green.vercel.app/',
+      },
+    },
+    {
+      id: 4,
+      title: 'Food Court Platform',
+      description: 'Multi-vendor ordering and management platform for food courts and vendors.',
+      fullDescription:
+        'Food Court Platform is a multi-vendor ordering system that lets patrons browse vendor menus, place orders, and pick up from a centralized collection point. Vendors can manage menus, orders, and availability in real-time while admins monitor operations and analytics.',
+      image: 'https://i.pinimg.com/736x/56/9a/61/569a616f5613606322db169c03280b4f.jpg',
+      alt: 'Assorted dishes served in a food court setting',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe', 'Firebase'],
+      category: 'Marketplace',
+      challenges: [
+        'Coordinating orders across multiple vendors',
+        'Ensuring timely pickup and order accuracy',
+        'Scaling to support peak meal times',
+      ],
+      results: [
+        'Improved vendor order throughput',
+        'Streamlined customer pickup experience',
+        'Reduced average wait times during peak hours',
+      ],
+      links: {
+        github: 'https://github.com/mercyk001/TheFoodCourt',
+        live: 'https://the-food-court-lime.vercel.app/',
+      },
+    },
+  ];
 
   return (
     <section className={`py-20 bg-background ${className}`}>
@@ -132,17 +196,18 @@ const FeaturedProjects = ({ className = '' }: FeaturedProjectsProps) => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) =>
-          <button
-            key={project.id}
-            onClick={() => setSelectedProject(project)}
-            className="group bg-card rounded-lg border border-border overflow-hidden hover:shadow-brand-lg transition-smooth cursor-pointer text-left">
-
+          {projects.map((project) => (
+            <button
+              key={project.id}
+              onClick={() => setSelectedProject(project)}
+              className="group bg-card rounded-lg border border-border overflow-hidden hover:shadow-brand-lg transition-smooth cursor-pointer text-left"
+            >
               <div className="relative h-48 overflow-hidden bg-muted">
                 <AppImage
-                src={project.image}
-                alt={project.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-smooth" />
+                  src={project.image}
+                  alt={project.alt}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
+                />
 
                 <div className="absolute top-4 right-4 px-3 py-1 bg-background/90 backdrop-blur-sm rounded-full">
                   <span className="text-xs font-medium text-foreground">{project.category}</span>
@@ -153,19 +218,17 @@ const FeaturedProjects = ({ className = '' }: FeaturedProjectsProps) => {
                 <h3 className="text-xl font-headline font-semibold text-card-foreground mb-3 group-hover:text-primary transition-fast">
                   {project.title}
                 </h3>
-                <p className="text-text-secondary mb-4 line-clamp-3">
-                  {project.description}
-                </p>
+                <p className="text-text-secondary mb-4 line-clamp-3">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) =>
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-surface text-text-secondary text-xs font-medium rounded-full">
-
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-surface text-text-secondary text-xs font-medium rounded-full"
+                    >
                       {tech}
                     </span>
-                )}
+                  ))}
                 </div>
 
                 <div className="flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-smooth">
@@ -174,14 +237,14 @@ const FeaturedProjects = ({ className = '' }: FeaturedProjectsProps) => {
                 </div>
               </div>
             </button>
-          )}
+          ))}
         </div>
 
         <div className="text-center mt-12">
           <button
             onClick={() => setSelectedProject(projects[0])}
-            className="inline-flex items-center px-8 py-4 bg-surface text-foreground font-cta font-semibold text-base rounded-lg border border-border hover:bg-muted transition-smooth">
-
+            className="inline-flex items-center px-8 py-4 bg-surface text-foreground font-cta font-semibold text-base rounded-lg border border-border hover:bg-muted transition-smooth"
+          >
             View All Projects
             <Icon name="ArrowRightIcon" size={20} className="ml-2" />
           </button>
@@ -193,8 +256,8 @@ const FeaturedProjects = ({ className = '' }: FeaturedProjectsProps) => {
         onClose={() => setSelectedProject(null)}
         project={selectedProject || undefined}
       />
-    </section>);
-
+    </section>
+  );
 };
 
 export default FeaturedProjects;
