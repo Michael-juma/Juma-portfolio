@@ -45,7 +45,7 @@ const CTASection = ({ className = '' }: CTASectionProps) => {
               <div className="text-white/80">Client Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-headline font-bold text-white mb-2">5+</div>
+              <div className="text-4xl font-headline font-bold text-white mb-2">2+</div>
               <div className="text-white/80">Years Experience</div>
             </div>
           </div>

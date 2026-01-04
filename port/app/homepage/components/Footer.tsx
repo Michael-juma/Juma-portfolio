@@ -134,7 +134,7 @@ const Footer = ({ className = '' }: FooterProps) => {
         <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm">
-              {isHydrated ? `© ${currentYear}` : '© 2025'} Juma.dev. All rights reserved.
+              {isHydrated ? `© ${currentYear}` : '© 2025'} Juma.dev
             </p>
             <div className="flex gap-6">
               <Link href="/homepage" className="text-slate-400 hover:text-primary transition-fast text-sm">

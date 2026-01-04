@@ -142,7 +142,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
                   <div className="w-3 h-3 rounded-full bg-yellow-500" />
                   <div className="w-3 h-3 rounded-full bg-green-500" />
                 </div>
-                <span className="text-slate-400 text-sm font-accent ml-2">developer.js</span>
+                <span className="text-slate-400 text-sm font-accent ml-2">juma.js</span>
               </div>
               
               <div className="p-6 font-accent text-sm min-h-[200px]">
