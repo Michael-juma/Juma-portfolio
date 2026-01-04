@@ -30,7 +30,7 @@ const TestimonialsSection = ({ className = '' }: TestimonialsSectionProps) => {
   const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Sarah Mitchell',
+    name: 'Mercy',
     role: 'CTO',
     company: 'TechVentures Inc',
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_1bdbe6c11-1763300715032.png",
@@ -40,17 +40,17 @@ const TestimonialsSection = ({ className = '' }: TestimonialsSectionProps) => {
   },
   {
     id: 2,
-    name: 'Michael Chen',
-    role: 'Product Manager',
+    name: 'Michael Ouma',
+    role: 'Software Engineering',
     company: 'DataFlow Solutions',
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_1a0203c69-1763294964268.png",
+    image: "https://avatars.githubusercontent.com/u/198223510?s=48&v=4",
     alt: 'Asian man in gray suit with black-rimmed glasses smiling professionally in office setting',
     content: 'Working with Juma was a game-changer for our analytics platform. The real-time dashboard handles millions of events seamlessly. Technical expertise combined with excellent communication.',
     rating: 5
   },
   {
     id: 3,
-    name: 'Emily Rodriguez',
+    name: 'Shadrack',
     role: 'Founder & CEO',
     company: 'StartupHub',
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_10bbbf135-1763294543564.png",
