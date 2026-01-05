@@ -1,3 +1,10 @@
+/*
+  Blog page temporarily disabled.
+  Original implementation preserved below for future restore.
+
+  (Begin original content)
+*/
+/*
 import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import BlogHero from './components/BlogHero';
@@ -34,4 +41,10 @@ export default function BlogPage() {
       </footer>
     </div>
   );
+}
+*/
+
+// Blog page temporarily disabled. Export a no-op page so route remains available but inactive.
+export default function BlogPageDisabled() {
+  return null;
 }

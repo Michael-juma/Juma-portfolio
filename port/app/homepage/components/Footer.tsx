@@ -21,14 +21,13 @@ const Footer = ({ className = '' }: FooterProps) => {
     navigation: [
       { id: 'nav-home', label: 'Home', href: '/homepage' },
       { id: 'nav-about', label: 'About', href: '/about' },
-      { id: 'nav-skills', label: 'Skills', href: '/skills' },
-      { id: 'nav-blog', label: 'Blog', href: '/blog' }
+      { id: 'nav-skills', label: 'Skills', href: '/skills' }
+      
     ],
     resources: [
       { id: 'res-contact', label: 'Contact', href: '/contact' },
       { id: 'res-resume', label: 'Resume', href: '/resume' },
-      { id: 'res-projects', label: 'Projects', href: '/homepage' },
-      { id: 'res-services', label: 'Services', href: '/homepage' }
+      { id: 'res-projects', label: 'Projects', href: '/projects' }
     ]
   };
 

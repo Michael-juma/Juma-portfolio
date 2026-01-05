@@ -1,3 +1,10 @@
+/*
+  BlogFilters component temporarily disabled.
+  Original implementation preserved below for future restore.
+
+  (Begin original content)
+*/
+/*
 'use client';
 
 import React from 'react';
@@ -112,3 +119,10 @@ const BlogFilters: React.FC<BlogFiltersProps> = ({
 };
 
 export default BlogFilters;
+
+*/
+
+// BlogFilters temporarily disabled. Export a no-op to preserve file.
+export default function BlogFilters() {
+  return null;
+}

@@ -4,7 +4,8 @@ import HeroSection from './components/HeroSection';
 import FeaturedProjects from './components/FeaturedProjects';
 import SkillsOverview from './components/SkillsOverview';
 import TestimonialsSection from './components/TestimonialsSection';
-import BlogPreview from './components/BlogPreview';
+// Blog preview temporarily commented out — preserved for future feature work
+// import BlogPreview from './components/BlogPreview';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 
@@ -23,7 +24,8 @@ export default function HomePage() {
         <FeaturedProjects />
         <SkillsOverview />
         <TestimonialsSection />
-        <BlogPreview />
+        {/* Blog preview temporarily commented out — preserved for future feature work */}
+        {/* <BlogPreview /> */}
         <CTASection />
       </main>
 
