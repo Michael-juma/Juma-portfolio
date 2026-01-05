@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
 interface Testimonial {
@@ -50,13 +49,8 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
           />
           <div className="relative z-10">
             <div className="flex flex-col items-center text-center mb-8">
-              <div className="relative w-20 h-20 rounded-full overflow-hidden mb-4 shadow-brand">
-                <AppImage
-                  src={currentTestimonial.image}
-                  alt={currentTestimonial.imageAlt}
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-brand bg-surface border border-border text-primary">
+                <Icon name="UserCircleIcon" size={48} variant="solid" className="text-primary" />
               </div>
               <h3 className="text-xl font-headline font-semibold text-card-foreground">
                 {currentTestimonial.name}
