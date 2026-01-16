@@ -146,6 +146,31 @@ export const projects: Project[] = [
       live: 'https://the-food-court-lime.vercel.app/',
     },
   },
+  {
+    id: 5,
+    title: 'Ecommerce Website',
+    description: 'A modern e-commerce platform for selling Water Equpmentes and Water as its own.',
+    fullDescription:
+      'This e-commerce platform allows users to browse products, add items to their cart, and complete purchases securely. Built with a focus on user experience and performance.',
+    image: 'https://i.pinimg.com/736x/dc/65/eb/dc65ebfb57ca04b8219c3824e735656f.jpg',
+    alt: 'E-commerce website interface displaying product listings',
+    technologies: ['HTML', 'TypeScript', 'CSS',],
+    category: 'E-commerce',
+    challenges: [
+      'Implementing a secure checkout process',
+      'Ensuring fast loading times for product images',
+      'Managing inventory and order tracking',
+    ],
+    results: [
+      'Secure and user-friendly shopping experience',
+      'Fast loading product images and descriptions',
+      'Efficient inventory management system',
+    ],
+    links: {
+      github: 'https://github.com/Michael-juma/ABSA-waters.git',
+      live: 'https://absa-waters.vercel.app/',
+    },
+  }
 ];
 
 export default projects;
